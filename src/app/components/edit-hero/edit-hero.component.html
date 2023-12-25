@@ -1,0 +1,24 @@
+<div *ngIf="hero" class="container mt-4">
+    <h2 class="text-center mb-4">{{ hero.name || 'New Hero' }}</h2>
+    <div class="mb-3">
+        <label for="heroName" class="form-label">Name:</label>
+        <input type="text" class="form-control" id="heroName" [(ngModel)]="hero.name" placeholder="Name">
+    </div>
+    <div class="mb-3">
+        <label for="heroFirstName" class="form-label">FirstName:</label>
+        <input type="text" class="form-control" id="heroFirstName" [(ngModel)]="hero.firstName" placeholder="FirstName">
+    </div>
+    <div class="mb-3">
+        <label for="heroLastName" class="form-label">LastName:</label>
+        <input type="text" class="form-control" id="heroLastName" [(ngModel)]="hero.lastName" placeholder="LastName">
+    </div>
+    <div class="mb-3">
+        <label for="heroPlace" class="form-label">Place:</label>
+        <input type="text" class="form-control" id="heroPlace" [(ngModel)]="hero.place" placeholder="Place">
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-primary me-md-2" type="button" (click)="updateHero(hero)" *ngIf="hero.id">Save</button>
+        <button class="btn btn-danger me-md-2" type="button" (click)="deleteHero(hero)" *ngIf="hero.id">Delete</button>
+        <button class="btn btn-success" type="button" (click)="createHero(hero)" *ngIf="!hero.id">Create</button>
+    </div>
+</div>
