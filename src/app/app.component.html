@@ -1,0 +1,30 @@
+<div class="container my-4">
+  <button class="btn btn-success mb-3" (click)="initNewHero()">Create New Hero</button>
+
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>Name</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Place</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let hero of heroes">
+          <td>{{hero.name}}</td>
+          <td>{{hero.firstName}}</td>
+          <td>{{hero.lastName}}</td>
+          <td>{{hero.place}}</td>
+          <td>
+            <button class="btn btn-primary btn-sm" (click)="editHero(hero)">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <app-edit-hero [hero]="heroToEdit" (heroesUpdated)="updateHeroList($event)"></app-edit-hero>
+</div>

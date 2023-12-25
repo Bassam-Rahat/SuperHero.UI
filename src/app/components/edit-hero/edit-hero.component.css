@@ -1,0 +1,14 @@
+/* Extra styles for modern and eye-catching look */
+input::placeholder {
+    font-style: italic;
+}
+
+input:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+h2 {
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 0.5rem;
+}

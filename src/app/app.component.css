@@ -1,0 +1,25 @@
+.table-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the table */
+    align-items: center; /* Vertically center the table */
+    height: 100vh; /* Take full height of the viewport */
+  }
+  
+  .table {
+    max-width: 90%; /* Increase maximum width */
+    margin-top: 20px; /* Optional spacing from the top */
+  }
+  
+  th, td {
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  thead {
+    background-color: #f4f4f4; /* Custom color for the header */
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Zebra-striping for rows */
+  }
+  
